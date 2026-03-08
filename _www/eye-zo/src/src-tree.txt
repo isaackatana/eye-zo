@@ -1,0 +1,12 @@
+Folder PATH listing
+Volume serial number is 8E78-FBF7
+C:.
+³   App.css
+³   App.tsx
+³   index.css
+³   main.tsx
+³   src-tree.txt
+³   
+ÀÄÄÄassets
+        react.svg
+        
