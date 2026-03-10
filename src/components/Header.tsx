@@ -18,7 +18,6 @@ export default function Header() {
             <div className="flex items-center">
               <Link to="/" className="flex items-center gap-2 font-bold text-lg">
                 <img src="/logo.png" className="h-8 w-8 object-contain" alt="EyeZo Logo" />
-                <span>EyeZo</span>
               </Link>
             </div>
 
@@ -96,8 +95,7 @@ export default function Header() {
         >
 
           {/* Menu Header */}
-          <div className="flex justify-between items-center p-4 border-b border-gray-700">
-            <span className="font-semibold text-lg">Menu</span>
+          <div className="flex justify-end items-center p-4 border-b border-gray-700">
             <button onClick={() => setMenuOpen(false)}>✖</button>
           </div>
 
