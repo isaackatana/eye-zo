@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import SongCard from "../components/SongCard";
 import MusicPlayer from "../components/MusicPlayer";
 
@@ -31,10 +31,35 @@ const songs: Song[] = [
     video: "/video/city-lights.mp4",
     cover: "/covers/city-lights.jpg",
   },
+  {
+    id: 3,
+    title: "Ocean Echo",
+    artist: "EyeZo Studios",
+    preview: "/audio/ocean-echo-preview.mp3",
+    full: "/audio/ocean-echo.mp3",
+    video: "/video/ocean-echo.mp4",
+    cover: "/covers/ocean-echo.jpg",
+  },
+  {
+    id: 4,
+    title: "Midnight Signal",
+    artist: "EyeZo Studios",
+    preview: "/audio/midnight-signal-preview.mp3",
+    full: "/audio/midnight-signal.mp3",
+    video: "/video/midnight-signal.mp4",
+    cover: "/covers/midnight-signal.jpg",
+  },
 ];
 
 export default function Music() {
-  const [currentSong, setCurrentSong] = useState<Song | null>(null);
+  const [currentSongId, setCurrentSongId] = useState<number | null>(null);
+
+  const currentIndex = useMemo(
+    () => songs.findIndex((song) => song.id === currentSongId),
+    [currentSongId]
+  );
+
+  const currentSong = currentIndex >= 0 ? songs[currentIndex] : null;
 
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
@@ -46,13 +71,25 @@ export default function Music() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 pb-32">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 pb-36">
         {songs.map((song) => (
-          <SongCard key={song.id} song={song} onPlay={setCurrentSong} />
+          <div
+            key={song.id}
+            className={song.id === currentSongId ? "ring-2 ring-blue-500 rounded-2xl" : ""}
+          >
+            <SongCard song={song} onPlay={() => setCurrentSongId(song.id)} />
+          </div>
         ))}
       </div>
 
-      {currentSong && <MusicPlayer song={currentSong} />}
+      {currentSong && (
+        <MusicPlayer
+          song={currentSong}
+          songs={songs}
+          currentIndex={currentIndex}
+          onSelectSong={(index) => setCurrentSongId(songs[index].id)}
+        />
+      )}
     </section>
   );
 }

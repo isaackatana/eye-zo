@@ -2,15 +2,15 @@ import type { Song } from "../pages/Music";
 
 type SongCardProps = {
   song: Song;
-  onPlay: (song: Song) => void;
+  onPlay: () => void;
 };
 
 export default function SongCard({ song, onPlay }: SongCardProps) {
   return (
     <button
       type="button"
-      onClick={() => onPlay(song)}
-      className="group text-left bg-neutral-950 border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/40 hover:-translate-y-1 transition-all"
+      onClick={onPlay}
+      className="group w-full text-left bg-neutral-950 border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/40 hover:-translate-y-1 transition-all"
     >
       <div className="aspect-square overflow-hidden">
         <img
