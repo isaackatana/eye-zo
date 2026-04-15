@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logo from "../assets/logo.png"; // 👈 import your logo
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -12,8 +13,13 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <Link to="/" className="text-xl font-bold tracking-[0.2em] uppercase text-brand-gold">
-          Eye-Zo Studios
+        {/* LOGO */}
+        <Link to="/" className="flex items-center gap-3">
+          <img
+            src={logo}
+            alt="Eye-Zo Studios"
+            className="h-10 w-auto object-contain"
+          />
         </Link>
 
         <nav className="hidden gap-6 md:flex">
