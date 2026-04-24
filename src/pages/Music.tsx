@@ -1,7 +1,7 @@
 const songs = [
-  { title: "Midnight Echo", artist: "Eye-Zo", type: "Afro Fusion" },
-  { title: "Coastline Dreams", artist: "Eye-Zo", type: "Ambient" },
-  { title: "Fire in Motion", artist: "Eye-Zo", type: "Visual EP" },
+  { title: "Midnight Echo", artist: "Eye Zo", type: "Afro Fusion" },
+  { title: "Coastline Dreams", artist: "Eye Zo", type: "Ambient" },
+  { title: "Fire in Motion", artist: "Eye Zo", type: "Visual EP" },
 ];
 
 export default function Music() {
