@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <section className="relative overflow-hidden">
-      <div className="mx-auto grid min-h-[85vh] max-w-7xl items-center gap-10 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:px-8">
+      <div className="mx-auto grid min-h-[85vh] max-w-7xl items-center gap-10 px-4 py-6 sm:px-6 lg:grid-cols-2 lg:px-8">
         <div>
           <p className="mb-4 text-sm uppercase tracking-[0.3em] text-brand-gold">
             Creative Studio • Music • Film • Culture

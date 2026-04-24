@@ -6,10 +6,10 @@ const songs = [
 
 export default function Music() {
   return (
-    <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-      <div className="mb-10">
+    <section className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+      <div className="mb-5">
         <p className="mb-3 text-sm uppercase tracking-[0.3em] text-brand-gold">Music</p>
-        <h1 className="text-4xl font-bold">Latest releases and sonic experiences</h1>
+        <h1 className="text-4xl font-bold">Latest releases</h1>
       </div>
 
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">

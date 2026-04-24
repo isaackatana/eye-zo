@@ -13,11 +13,11 @@ const projects = [
 
 export default function Film() {
   return (
-    <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <section className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
       <p className="mb-3 text-sm uppercase tracking-[0.3em] text-brand-gold">
         Film & Documentaries
       </p>
-      <h1 className="mb-10 text-4xl font-bold">Visual stories that stay with you</h1>
+      <h1 className="mb-5 text-4xl font-bold">Visual stories</h1>
 
       <div className="grid gap-8 lg:grid-cols-2">
         {projects.map((project) => (

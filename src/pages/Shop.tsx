@@ -6,9 +6,9 @@ const items = [
 
 export default function Shop() {
   return (
-    <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <section className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
       <p className="mb-3 text-sm uppercase tracking-[0.3em] text-brand-gold">Shop</p>
-      <h1 className="mb-10 text-4xl font-bold">Curated pieces from the studio</h1>
+      <h1 className="mb-5 text-4xl font-bold">Curated pieces</h1>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {items.map((item) => (
