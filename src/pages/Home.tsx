@@ -10,7 +10,7 @@ export default function Home() {
             Stories in sound, vision, and style.
           </h1>
           <p className="mb-4 max-w-xl text-lg text-white/75">
-            Eye-Zo Studios is a modern creative platform for music, film, documentaries,
+            Eye Zo is a modern creative platform for music, film, documentaries,
             visual storytelling, and curated products.
           </p>
 

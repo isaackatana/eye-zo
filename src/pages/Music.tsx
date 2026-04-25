@@ -20,7 +20,7 @@ export default function Music() {
           >
             <div className="mb-4 aspect-square rounded-2xl bg-gradient-to-br from-white/10 to-brand-gold/20" />
             <p className="text-sm uppercase tracking-widest text-brand-gold">{song.type}</p>
-            <h2 className="mt-2 text-2xl font-bold">{song.title}</h2>
+            <h2 className=" text-2xl font-bold">{song.title}</h2>
             <p className="mt-0 text-white/70">{song.artist}</p>
             <button className="mt-2 rounded-full bg-brand-gold px-5 py-2 font-semibold text-black">
               Preview
