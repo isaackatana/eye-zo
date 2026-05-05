@@ -5,13 +5,14 @@ export type Song = {
   type: string;
   audioUrl: string;
   videoUrl: string;
+  coverUrl?: string;
 };
 
 export const songs: Song[] = [
   {
     id: 1,
     title: "Midnight Echo",
-    artist: "Eye-Zo",
+    artist: "Eye Zo",
     type: "Afro Fusion",
     audioUrl: "/audio/midnight-echo.mp3",
     videoUrl: "/videos/midnight-echo.mp4",
@@ -19,7 +20,7 @@ export const songs: Song[] = [
   {
     id: 2,
     title: "Coastline Dreams",
-    artist: "Eye-Zo",
+    artist: "Eye Zo",
     type: "Ambient",
     audioUrl: "/audio/coastline-dreams.mp3",
     videoUrl: "/videos/coastline-dreams.mp4",
@@ -27,7 +28,7 @@ export const songs: Song[] = [
   {
     id: 3,
     title: "Fire in Motion",
-    artist: "Eye-Zo",
+    artist: "Eye Zo",
     type: "Visual EP",
     audioUrl: "/audio/fire-in-motion.mp3",
     videoUrl: "/videos/fire-in-motion.mp4",
