@@ -8,6 +8,9 @@ import Film from "./pages/Film";
 import Shop from "./pages/Shop";
 import About from "./pages/About";
 
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+
 export default function App() {
   return (
     <div className="flex min-h-screen flex-col bg-brand-black text-brand-cream">
@@ -20,6 +23,8 @@ export default function App() {
           <Route path="/film" element={<Film />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/about" element={<About />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </main>
 

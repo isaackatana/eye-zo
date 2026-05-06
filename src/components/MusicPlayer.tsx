@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { songs, type Song } from "../data/songs";
+import { useAuth } from "../context/AuthContext";
 
 type MusicPlayerProps = {
   currentSong: Song;
@@ -15,10 +16,10 @@ export default function MusicPlayer({
   setIsPlaying,
 }: MusicPlayerProps) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const { isLoggedIn } = useAuth();
 
   const [mediaMode, setMediaMode] = useState<"audio" | "video">("audio");
   const [isShuffle, setIsShuffle] = useState(false);
-  const [isLoggedIn] = useState(false);
   const [isOpen, setIsOpen] = useState(true);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
@@ -40,8 +41,10 @@ export default function MusicPlayer({
 
   const formatTime = (time: number) => {
     if (!Number.isFinite(time)) return "0:00";
+
     const minutes = Math.floor(time / 60);
     const seconds = Math.floor(time % 60);
+
     return `${minutes}:${seconds.toString().padStart(2, "0")}`;
   };
 
@@ -59,6 +62,7 @@ export default function MusicPlayer({
 
   const handleLoadedMetadata = () => {
     if (!audioRef.current) return;
+
     setDuration(audioRef.current.duration);
   };
 
@@ -267,6 +271,12 @@ export default function MusicPlayer({
           <p className="mt-4 text-xs text-white/50">
             Preview mode: guests can listen for {previewLimit} seconds. Log in
             to unlock full playback.
+          </p>
+        )}
+
+        {isLoggedIn && (
+          <p className="mt-4 text-xs text-brand-gold">
+            Full playback unlocked.
           </p>
         )}
       </div>
