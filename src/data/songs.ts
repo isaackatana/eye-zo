@@ -11,10 +11,10 @@ export type Song = {
 export const songs: Song[] = [
   {
     id: 1,
-    title: "Midnight Echo",
-    artist: "Eye Zo",
-    type: "Afro Fusion",
-    audioUrl: "/audio/midnight-echo.mp3",
+    title: "Bambini",
+    artist: "D-Berry",
+    type: "Trap",
+    audioUrl: "/audio/Eye Zo - Bambini (Feat. D-Berry).wav",
     videoUrl: "/videos/midnight-echo.mp4",
   },
   {
