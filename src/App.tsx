@@ -11,6 +11,7 @@ import About from "./pages/About";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Favorites from "./pages/Favorites";
+import Upload from "./pages/Upload";
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/favorites" element={<Favorites />} />
+          <Route path="/upload" element={<Upload />} />
         </Routes>
       </main>
 
