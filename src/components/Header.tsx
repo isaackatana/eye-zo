@@ -13,7 +13,6 @@ const publicLinks = [
 const privateLinks = [
   { name: "Dashboard", path: "/dashboard" },
   { name: "Favorites", path: "/favorites" },
-  { name: "Upload", path: "/upload" },
 ];;
 
 export default function Header() {
